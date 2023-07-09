@@ -1,7 +1,7 @@
-from TextSummarization.config.configuration import * 
-from TextSummarization.componenets.data_ingestion import DataIngestion
+from src.TextSummarization.config.configuration import * 
+from src.TextSummarization.components.data_ingestion import DataIngestion
 
-from TextSummarization.logging import logger
+from src.TextSummarization.logging import logger
 
 class DataIngestionTrainingPipeline:
     def __init__(self):

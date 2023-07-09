@@ -1,7 +1,7 @@
 import os
 from box.exceptions import BoxValueError
 import yaml
-from TextSummarization.logging import logger
+from src.TextSummarization.logging import logger
 from ensure import ensure_annotations
 from box import ConfigBox
 from pathlib import Path

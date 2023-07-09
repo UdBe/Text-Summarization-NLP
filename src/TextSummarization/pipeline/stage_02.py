@@ -1,15 +1,14 @@
-from TextSummarization.config.configuration import * 
-from TextSummarization.componenets.data_ingestion import DataIngestion
+from src.TextSummarization.config.configuration import ConfigurationManager
+from src.TextSummarization.components.data_validation import DataValiadtion
+from src.TextSummarization.logging import logger
 
-from TextSummarization.logging import logger
 
-class DataIngestionTrainingPipeline:
+class DataValidationTrainingPipeline:
     def __init__(self):
         pass
 
-    def main(self): 
+    def main(self):
         config = ConfigurationManager()
-        data_ingestion_config = config.get_data_ingestion_config()
-        data_ingestion = DataIngestion(config=data_ingestion_config)
-        data_ingestion.download_file()
-        data_ingestion.extract_zip_file()
+        data_validation_config = config.get_data_validation_config()
+        data_validation = DataValiadtion(config=data_validation_config)
+        data_validation.validate_all_files_exist()
